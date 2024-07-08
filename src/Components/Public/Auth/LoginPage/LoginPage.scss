@@ -1,0 +1,111 @@
+@import "../../../../assets/styles/sass/mixins.scss";
+@import "../../../../assets/styles/sass/variables.scss";
+
+.inner {
+  @include flex-container(row, center, center, nowrap);
+  width: 100%;
+}
+
+.login {
+  @include flex-container(column, center, stretch, nowrap);
+  width: 40%;
+  margin-top: 100px;
+  margin-right: 70px;
+}
+
+.background {
+  background-size: 1300px 1300px;
+  background-position: 5px 100px;
+  background-origin: content-box;
+}
+
+.title {
+  flex-direction: column;
+  margin: auto 1rem 3rem 18rem;
+  font-size: $fontsize24;
+  font-weight: 500;
+}
+
+.control {
+  margin: 1rem 0;
+  width: 110%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.control label {
+  font-weight: lighter;
+  color: $blackcolor;
+  padding: 0 auto 1px;
+  margin: 0.5rem auto 0.5rem 3rem;
+}
+
+.control input {
+  flex: 3;
+  font: inherit;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  margin: auto 3rem auto 3rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 7px 7px 7px 7px lightgray;
+}
+
+.control input:focus {
+  outline: none;
+}
+
+.form-list {
+  @include flex-container(row, space-between, auto, nowrap);
+  margin-left: 1rem;
+}
+
+.forget-password {
+  font-family: Arial;
+  color: $blackcolor;
+  font-weight: 600;
+  font-size: $fontsize12;
+  text-decoration: none;
+}
+
+.checkbox {
+  @include flex-container(row, end, stretch, nowrap);
+  font-family: Arial;
+  font-weight: 600;
+  font-size: $fontsize12;
+  color: $blackcolor;
+  accent-color: $textColor300;
+  border-radius: 3rem;
+}
+
+.create-account {
+  @include flex-container(row, center, center, nowrap);
+  text-decoration: none;
+  margin: 2rem 7rem auto 10rem;
+  color: $textColor300;
+  font-weight: 500;
+}
+
+.tab-list {
+  @include flex-container(row, flex-start, center, wrap);
+}
+
+[label] .tab-list {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0.5rem 0.75rem;
+  font-size: small;
+  cursor: pointer;
+}
+
+.tab-list-active {
+  color: $textColor300;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1.5px;
+}

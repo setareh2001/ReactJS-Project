@@ -1,0 +1,28 @@
+@import "../../assets/styles/sass/mixins.scss";
+@import "../../assets/styles/sass/variables.scss";
+
+.button {
+  @include container(55%, 50px, $textColor300);
+  border-radius: 12px;
+  color: $maincolor;
+  font-size: $fontsize24;
+  margin: 1rem auto auto 10rem;
+  border: none;
+}
+
+.button:hover,
+.button:active {
+  background: $textColor300;
+  border-color: $primaryColor;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}

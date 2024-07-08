@@ -1,0 +1,44 @@
+@import "../../../assets/styles/sass/mixins.scss";
+@import "../../../assets/styles/sass/variables.scss";
+
+.background-container {
+  background-image: url("../../../assets/Images/pic4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  background-size: 100%;
+  animation-name: changeBackground;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  @include flex-container(row, center, flex-end, wrap);
+}
+
+/* Keyframes for the animation */
+@keyframes changeBackground {
+  0% {
+    background-image: url("../../../assets/Images/pic4.jpg");
+  }
+  33% {
+    background-image: url("../../../assets/Images/pic4.jpg");
+  }
+
+  66% {
+    background-image: url("../../../assets/Images/post4.png");
+  }
+
+  100% {
+    background-image: url("../../../assets/Images/pic4.jpg");
+  }
+}
+
+.home-layout {
+  @include flex-container(column, center, center, wrap);
+  background-color: $background;
+}
+
+.chat {
+  width: 90%;
+  @include flex-container(row, flex-end, center, wrap);
+  margin-bottom: 40px;
+}
